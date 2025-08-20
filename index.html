@@ -1,1 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind CSS Responsive Header</title>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome (required for icons) -->
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-[#070714] font-['Jost'] ">
+<!-- ======= Announcement Bar ======= -->
+<div class="w-full bg-red-700 text-white text-sm px-4 py-2 flex flex-col sm:flex-row justify-between items-center gap-2 z-50">
+
+  <div class="w-2/3 flex mx-auto items-center  justify-between ">
+  <!-- Left: Email with icon -->
+  <div class="flex items-center gap-2">
+    <img src="images/email.png" alt="Email Icon" class="w-4 h-4" />
+    <a href="mailto:info@digitalbrandworld.com" class="hover:underline">info@digitalbrandworld.com</a>
+  </div>
+
+  <!-- Right: Message or CTA -->
+  <div class="text-center sm:text-right">
+    🚀 Empowering brands with digital transformation!
+  </div>
+</div>
+</div>
+
+<!-- Header -->
+<header class="relative w-full min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('digatal.imge/home.png');">
+  
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+  <!-- ========== NAVIGATION BAR ========== --
+  <div class="relative z-10 w-2/3 mx-auto py-6">
+    <div class="flex items-center justify-between">
+      
+      <!-- Logo --
+      <div class="flex items-center gap-2">
+        <img src="digatal.imge/logo.png" alt="Logo" class="h-20 w-auto" />
+        <span class="text-red-600 font-bold text-lg"></span>
+      </div>
+
+      <!-- Mobile Menu Toggle --
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+-->
+
+     <!-- NAVBAR CONTAINER -->
+<div class="relative w-[2/3] z-10 py-6">
+  <div class="w-2/3 max-w-7xl mx-auto flex items-center justify-between relative">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-2 z-10">
+      <img src="images/logo.png" alt="Logo" class="h-16 w-auto" />
+    </div>
+
+    <!-- CENTER NAV LINKS ABSOLUTE CENTERED -->
+    <nav class="absolute left-1/2 transform -translate-x-1/2 z-0">
+      <ul class="flex items-center gap-8 text-white font-medium">
+        <li><a href="#" class="hover:text-red-500 transition">Home</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Agency</a></li>
+        <li class="relative group">
+          <button class="flex items-center gap-1 hover:text-red-500 transition">
+            Services
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </li>
+        <li><a href="#" class="hover:text-red-500 transition">Contact</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- GET A QUOTE BUTTON -->
+    <div class="z-10">
+      <button class="bg-gradient-to-r from-red-700 to-red-500 text-white font-medium px-6 py-2 rounded-full hover:scale-105 hover:shadow-lg transition">
+        Get a Quote
+      </button>
+    </div>
+
+  </div>
+</div>
+
+     
+
+  <!-- ========== TEXT + FORM SECTION ========== -->
+  <div class="relative z-10 w-2/3 mx-auto flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-100px)] gap-10 pt-[0.5rem]">
+    
+    <!-- Text Block -->
+    <div class="w-full lg:w-1/2 flex items-center justify-start">
+      <div class="max-w-xl text-white space-y-6">
+
+        <!-- h1 heading -->
+        <h1 class="text-[26px] leading-[40px] md:text-[50px] md:leading-[70px] font-semibold drop-shadow-lg">
+          Crafting Stunning <br />
+          Websites & Powerful <span class="text-red-500">Marketing Strategies</span>
+        </h1>
+
+        <!-- paragraph -->
+        <p class="text-[16px] md:text-[20px] text-white drop-shadow-lg">
+          We help businesses build their online presence and grow with proven digital solutions.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="inline-block bg-red-600 hover:bg-red-700 transition text-white text-lg font-medium px-6 py-3 rounded-full">
+          Request Free Consultation
+        </a>
+      </div>
+    </div>
+
+    <!-- Sticky / Static Form -->
+    <div class="w-full lg:w-[400px]">
+      <div class="bg-gradient-to-br from-[#7e1212] to-[#8a2020] p-6 rounded-xl shadow-lg">
+        <h2 class="text-white text-xl font-bold mb-4">GET A QUOTE</h2>
+        <form class="space-y-4">
+          <input type="text" placeholder="Name" class="w-full px-4 py-2 rounded bg-white text-black focus:outline-none" />
+          <input type="email" placeholder="Email Address" class="w-full px-4 py-2 rounded bg-white text-black focus:outline-none" />
+          <input type="text" placeholder="Phone No" class="w-full px-4 py-2 rounded bg-white text-black focus:outline-none" />
+          <select class="w-full px-4 py-2 rounded bg-white text-black focus:outline-none">
+            <option>Services</option>
+            <option>Web Design</option>
+            <option>Branding</option>
+            <option>Marketing</option>
+          </select>
+          <textarea rows="3" placeholder="Message" class="w-full px-4 py-2 rounded bg-white text-black focus:outline-none"></textarea>
+          <button type="submit" class="bg-red-600 text-white font-semibold w-full py-3 rounded-full hover:bg-red-700 transition">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+
+
+
+
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="md:hidden mt-4 px-6 hidden">
+    <nav class="flex flex-col gap-4 text-black font-medium">
+      <a href="#" class="hover:text-red-500 transition">Home</a>
+      <a href="#" class="hover:text-red-500 transition">Agency</a>
+      <a href="#" class="hover:text-red-500 transition">Services</a>
+      <a href="#" class="hover:text-red-500 transition">Contact</a>
+      <a href="#" class="hover:text-red-500 transition">Blog</a>
+      <button class="bg-gradient-to-r from-red-700 to-red-500 text-white font-medium px-6 py-2 rounded-full hover:scale-105 hover:shadow-lg transition">
+        Get a Quote
+      </button>
+    </nav>
+  </div>
+
+
+</header>
+
+<section class="w-full bg-gradient-to-r from-[#0B1C29] to-[#241F3F] py-20 px-4">
+
+  <div class="text-center mb-12">
+      <button class="px-5 py-1 border border-red-500 rounded-full text-sm mb-4 text-white">About Us</button>
+      <h2 class="text-6xl md:text-5xl font-bold text-white leading-tight ">
+        Dedicated to Building <span class="text-red-600">Brands</span><br />That Lead
+      </h2>
+    </div>
+
+  <div class="w-2/3 mx-auto flex flex-col md:flex-row items-start gap-10 justify-center items-center">
+
+    <!-- Left Image Box (60%) -->
+    <div class="relative w-full md:w-3/5 rounded-2xl overflow-hidden h-[400px] md:h-[550px] shadow-lg">
+      <img src="images/about.png" alt="Team" class="w-full h-full object-cover rounded-2xl" />
+
+      <!-- Badge -->
+      <div class="absolute bottom-0 left-0 bg-black flex gap-4 px-6 py-4 rounded-tr-2xl">
+        <p class="text-red-600 text-4xl font-bold leading-none">10+ </p>
+        <p class="text-white text-sm font-semibold">YEARS OF<br />EXPERIENCE</p>
+      </div>
+    </div>
+
+    <!-- Right Text Box (40%) -->
+    <div class="w-full md:w-2/5 space-y-2  text-white">
+      <h3 class="text-2xl font-semibold">Why Digital Marketing Is Important ?</h3>
+      <p class="text-gray-300 text-base leading-relaxed">
+        Digital marketing not only helps the business to grow and earn higher amount of profit, but also provides a basis of trust and compassion amongst the customers. The use of effective and efficient digital marketing makes the activities of the business much smoother and it’s an integral investment in this era of modern technology.
+      </p>
+      <p class="text-gray-300 text-base leading-relaxed">
+        In case your business is carrying out its operations online or whether you want to sale your products online, with digital marketing you can easily check your sales and measure your returns quickly. As social media channels play a significant role in persuading customers and increasing customer base, social media marketing comes into play. With this your business may reach unimaginable heights.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="bg-gradient-to-r from-[#0B1C29] to-[#241F3F] text-white py-16 px-4">
+
+  <div class="text-center mb-12">
+      <button class="px-5 py-1 border border-red-500 rounded-full text-sm mb-4 text-white">About Us</button>
+      <h2 class="text-6xl md:text-[50px] font-bold leading-tight">
+        We Provide Best Serivice for <br> <span class="text-red-600">Your Brands.</span  >
+      </h2>
+    </div>
+
+  <div class="w-11/12 max-w-7xl mx-auto w-2/3 mx-auto flex flex-col md:flex-row items-start gap-10 justify-center items-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card Start -->
+      <div class="bg-[#0D0F17] p-8 rounded-2xl text-center shadow-md border border-gray-800 hover:shadow-lg transition">
+        <div class="mb-6 flex justify-center">
+          <img src="images/frame.png" alt="Digital Marketing" class="h-14 w-14 bg-[#12141d] p-2 rounded-full" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
+        <p class="text-gray-400 mb-6">Digital Marketing is a wide term which includes several other tools, helping you and your website.</p>
+        <a href="#" class="inline-block border border-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Explore More
+        </a>
+      </div>
+      <!-- Card End -->
+
+      <!-- Repeat with your own content -->
+      <div class="bg-[#0D0F17] p-8 rounded-2xl text-center shadow-md border border-gray-800 hover:shadow-lg transition">
+        <div class="mb-6 flex justify-center">
+          <img src="images/frame1.png" alt="SEO" class="h-14 w-14 bg-[#12141d] p-2 rounded-full" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Search Engine Optimisation</h3>
+        <p class="text-gray-400 mb-6">Search Engine Optimization is the key to enhance your business with its multipurpose techniques.</p>
+        <a href="#" class="inline-block border border-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Explore More
+        </a>
+      </div>
+
+      <div class="bg-[#0D0F17] p-8 rounded-2xl text-center shadow-md border border-gray-800 hover:shadow-lg transition">
+        <div class="mb-6 flex justify-center">
+          <img src="images/frame2.png" alt="Social Media Marketing" class="h-14 w-14 bg-[#12141d] p-2 rounded-full" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Social Media Marketing</h3>
+        <p class="text-gray-400 mb-6">To connect with the people and understand the environment, social media marketing.</p>
+        <a href="#" class="inline-block border border-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Explore More
+        </a>
+      </div>
+
+      <div class="bg-[#0D0F17] p-8 rounded-2xl text-center shadow-md border border-gray-800 hover:shadow-lg transition">
+        <div class="mb-6 flex justify-center">
+          <img src="images/frame3.png" alt="Pay Per Click" class="h-14 w-14 bg-[#12141d] p-2 rounded-full" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Pay Per Click</h3>
+        <p class="text-gray-400 mb-6">Pay Per Click is the mostly used technique to construct a business.</p>
+        <a href="#" class="inline-block border border-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Explore More
+        </a>
+      </div>
+
+      <div class="bg-[#0D0F17] p-8 rounded-2xl text-center shadow-md border border-gray-800 hover:shadow-lg transition">
+        <div class="mb-6 flex justify-center">
+          <img src="images/frame4.png" alt="Email Marketing" class="h-14 w-14 bg-[#12141d] p-2 rounded-full" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Email Marketing</h3>
+        <p class="text-gray-400 mb-6">An efficient and effective manner to create more leads and connect with the customers.</p>
+        <a href="#" class="inline-block border border-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Explore More
+        </a>
+      </div>
+
+      <div class="bg-[#0D0F17] p-8 rounded-2xl text-center shadow-md border border-gray-800 hover:shadow-lg transition">
+        <div class="mb-6 flex justify-center">
+          <img src="images/group.png" alt="Website Design" class="h-14 w-14 bg-[#12141d] p-2 rounded-full" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Website Design & Development</h3>
+        <p class="text-gray-400 mb-6">It is the most significant aspect to be considered to create a platform.</p>
+        <a href="#" class="inline-block border border-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Explore More
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="w-full bg-gradient-to-r from-[#0B1C29] to-[#241F3F] text-white py-16 px-4">
+    <div class="w-2/3 mx-auto flex flex-col md:flex-row items-start gap-10 justify-center items-center"><!-- "max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10"> -->
+
+    <!-- Left Image -->
+    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden">
+      <img src="images/image 18.png" alt="Our Process" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+    </div>
+
+    <!-- Right Content -->
+    <div class="w-full md:w-1/2 space-y-6">
+      
+      <!-- Tag -->
+      <span class="inline-block border border-red-500 text-white px-4 py-1 rounded-full text-sm">
+        Our Process
+      </span>
+
+      <!-- Heading -->
+      <h2 class="text-3xl sm:text-4xl font-semibold">
+        Focused On Your Success <br />
+        Fueled By <span class="text-red-500">Innovation</span>
+      </h2>
+
+      <!-- Bullet List with Checkmarks -->
+      <ul class="space-y-5">
+        <li class="flex items-start gap-4">
+          <span class="w-6 h-6 flex items-center justify-center rounded-full border border-white">
+            ✔
+          </span>
+          <p class="text-lg">We value Customer’s opinions</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="w-6 h-6 flex items-center justify-center rounded-full border border-white">
+            ✔
+          </span>
+          <p class="text-lg">We satisfies Each customer needs</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="w-6 h-6 flex items-center justify-center rounded-full border border-white">
+            ✔
+             </span>
+          <p class="text-lg">We support and answer all Queries</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="w-6 h-6 flex items-center justify-center rounded-full border border-white">
+            ✔
+          </span>
+          <p class="text-lg">We ASK, We DON’T guess</p>
+        </li>
+      </ul>
+
+      <!-- CTA Button -->
+      <a href="#contact" class="inline-block bg-red-600 hover:bg-red-700 transition text-white text-base font-medium px-6 py-3 rounded-full">
+        Book a Consultation
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="w-full bg-gradient-to-r from-[#0B1C29] to-[#241F3F] text-white py-16 px-4">
+  <div class="text-center space-y-8 w-full ">
+
+    <!-- Tag Button -->
+    <div>
+      <span class="inline-block border border-red-500 text-white px-5 py-1 rounded-full text-sm font-medium">
+        Why Digital Brand World?
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold">
+      <span class="text-red-500">5 Principles</span> of Our Work
+    </h2>
+
+    <!-- Description -->
+    <p class="max-w-3xl mx-auto text-gray-300 text-base leading-relaxed">
+      Digitalbrandworld makes sure that you maintain the quality and originality of your website.
+      Our team believes in consistency and punctuality which provides best outcome for your business.
+      Providing every single detail, we ensure your success and work step by step to achieve goals.
+    </p>
+
+    <!-- Boxes Grid -->
+
+     <!-- Boxes Grid Fixed -->
+
+  <!-- Parent Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-2/3 mx-auto pt-10 justify-items-center">
+
+  <!-- Card 1 -->
+  <div class="bg-[#12131D] rounded-2xl py-8 px-6 flex flex-col items-center space-y-4 w-full max-w-xs">
+    <img src="images/Fram.png" alt="Experience" class="w-10 h-10 text-red-500" />
+    <h4 class="text-lg font-semibold text-white text-center">Industry Experience</h4>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="bg-[#12131D] rounded-2xl py-8 px-6 flex flex-col items-center space-y-4 w-full max-w-xs">
+    <img src="images/Group1.png" alt="Team" class="w-10 h-10 text-red-500" />
+    <h4 class="text-lg font-semibold text-white text-center">Brilliant Team</h4>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="bg-[#12131D] rounded-2xl py-8 px-6 flex flex-col items-center space-y-4 w-full max-w-xs">
+    <img src="images/Group2.png" alt="Creative" class="w-10 h-10 text-red-500" />
+    <h4 class="text-lg font-semibold text-white text-center">Creative & Professional</h4>
+  </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="flex gap-4 items-center justify-center">
+   <div class="bg-[#12131D] rounded-2xl py-8 px-6 flex flex-col items-center space-y-4 w-[400px] max-w-xs">
+    <img src="images/Frame3 - Copy.png" alt="Solutions" class="w-10 h-10 text-red-500" />
+    <h4 class="text-lg font-semibold text-white text-center">Complex Solutions</h4>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="bg-[#12131D] rounded-2xl py-8 px-6 flex flex-col items-center space-y-4 w-[400px] max-w-xs">
+    <img src="images/Group - Copy.png" alt="Guarantee" class="w-10 h-10 text-red-500" />
+    <h4 class="text-lg font-semibold text-white text-center">100% Result Guarantee</h4>
+  </div>
+  </div>
+
+
+
+
+
+   
+
+
+
+  <div class="mt-14 bg-[#0E0F1A] rounded-[100px] px-12 py-14 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 max-w-4xl mx-auto">
+      <!-- Card 1 -->
+      <div class="text-center">
+        <h3 class="text-4xl font-bold text-red-500">16</h3>
+        <p class="uppercase tracking-widest text-sm text-gray-400 mt-2">Specialists</p>
+      </div>
+      <!-- Divider -->
+      <div class="hidden md:block w-px h-12 bg-gradient-to-b from-red-500 via-orange-500 to-red-500"></div>
+      <!-- Card 2 -->
+      <div class="text-center">
+        <h3 class="text-4xl font-bold text-red-500">36</h3>
+        <p class="uppercase tracking-widest text-sm text-gray-400 mt-2">Happy Clients</p>
+      </div>
+      <!-- Divider -->
+      <div class="hidden md:block w-px h-12 bg-gradient-to-b from-red-500 via-orange-500 to-red-500"></div>
+      <!-- Card 3 -->
+      <div class="text-center">
+        <h3 class="text-4xl font-bold text-red-500">107</h3>
+        <p class="uppercase tracking-widest text-sm text-gray-400 mt-2">Successful Projects</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="w-full bg-gradient-to-r from-[#0B1C29] to-[#241F3F] text-white py-16 px-4">
+  <div class="max-w-full mx-auto text-center space-y-8">
+
+     <div>
+      <span class="inline-block border border-red-500 text-white px-5 py-1 rounded-full text-sm font-medium">
+        Case Studies
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold">
+      Showcasing Our Impact and <span class="text-red-500"><br>Innovation.</span>
+    </h2>
+   
+
+    <!-- Horizontal Scroll Cards -->
+    <div class="flex space-x-6 overflow-x-auto scrollbar-hide px-2 sm:px-0">
+      
+      <!-- Single Card -->
+      <div class="relative min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] h-[420px] rounded-xl overflow-hidden group shadow-lg">
+        <img src="digatal.imge/Mask group4.png" alt="Card Image"
+             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        
+        <!-- Text and Button -->
+        <div class="absolute bottom-5 left-5 right-5 flex justify-between items-center text-white">
+          <h3 class="text-lg font-semibold">Website Design & Development</h3>
+          <button class="w-9 h-9 rounded-full border-2 border-red-500 flex items-center justify-center hover:bg-red-500 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Repeat same card for more slides -->
+      <!-- ... -->
+      <div class="relative min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] h-[420px] rounded-xl overflow-hidden group shadow-lg">
+        <img src="images/image 18.png" alt="Card Image"
+             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        
+        <!-- Text and Button -->
+        <div class="absolute bottom-5 left-5 right-5 flex justify-between items-center text-white">
+          <h3 class="text-lg font-semibold">Website Design & Development</h3>
+          <button class="w-9 h-9 rounded-full border-2 border-red-500 flex items-center justify-center hover:bg-red-500 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="relative min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] h-[420px] rounded-xl overflow-hidden group shadow-lg">
+        <img src="images/Mask group.png" alt="Card Image"
+             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        
+        <!-- Text and Button -->
+        <div class="absolute bottom-5 left-5 right-5 flex justify-between items-center text-white">
+          <h3 class="text-lg font-semibold">Website Design & Development</h3>
+          <button class="w-9 h-9 rounded-full border-2 border-red-500 flex items-center justify-center hover:bg-red-500 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="relative min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] h-[420px] rounded-xl overflow-hidden group shadow-lg">
+        <img src="images/Mask group1.png" alt="Card Image"
+             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        
+        <!-- Text and Button -->
+        <div class="absolute bottom-5 left-5 right-5 flex justify-between items-center text-white">
+          <h3 class="text-lg font-semibold">Website Design & Development</h3>
+          <button class="w-9 h-9 rounded-full border-2 border-red-500 flex items-center justify-center hover:bg-red-500 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination dots -->
+    <div class="flex justify-center mt-8 space-x-2">
+      <span class="w-3 h-3 bg-white rounded-full opacity-70"></span>
+      <span class="w-3 h-3 bg-white rounded-full opacity-30"></span>
+      <span class="w-3 h-3 bg-white rounded-full opacity-30"></span>
+      <span class="w-3 h-3 bg-white rounded-full opacity-30"></span>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="bg-gradient-to-r from-[#0B1C29] to-[#241F3F] text-white py-16 px-4">
+  <div class="w-2/3 mx-auto space-y-10">
+
+    <!-- Header + Buttons -->
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
+      <!-- Left Text -->
+      <div class="text-center lg:text-left space-y-4">
+        <span class="inline-block border border-red-500 text-white px-5 py-1 rounded-full text-sm font-medium">
+          Happy Customers
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold">
+          Discover How We’ve Helped <br />
+          <span class="text-red-500">Our Clients Achieve</span> Their Goals.
+        </h2>
+      </div>
+
+      <!-- Arrows -->
+      <div class="flex gap-4">
+        <button class="w-12 h-12 rounded-full border border-red-500 text-xl text-white hover:bg-red-500 transition">&larr;</button>
+        <button class="w-12 h-12 rounded-full border border-red-500 text-xl text-white hover:bg-red-500 transition">&rarr;</button>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-[#12131D] rounded-xl p-6 relative">
+        <p class="text-gray-200 leading-relaxed">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+        </p>
+        <div class="mt-6 border-t border-red-500 pt-4 flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/men/10.jpg" class="w-12 h-12 rounded-full" alt="Customer" />
+          <div>
+            <h4 class="font-semibold text-white">Vetty D</h4>
+            <p class="text-sm text-gray-400">Customer</p>
+          </div>
+        </div>
+        <div class="absolute bottom-0 right-0 p-4 opacity-10">
+          <svg width="48" height="48" fill="currentColor" class="text-white"><path d="M10 10h10v28h-10zm18 0h10v28h-10z"/></svg>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#12131D] rounded-xl p-6 relative">
+        <p class="text-gray-200 leading-relaxed">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+        </p>
+        <div class="mt-6 border-t border-red-500 pt-4 flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-12 h-12 rounded-full" alt="Customer" />
+          <div>
+            <h4 class="font-semibold text-white">Vetty D</h4>
+            <p class="text-sm text-gray-400">Customer</p>
+          </div>
+        </div>
+        <div class="absolute bottom-0 right-0 p-4 opacity-10">
+          <svg width="48" height="48" fill="currentColor" class="text-white"><path d="M10 10h10v28h-10zm18 0h10v28h-10z"/></svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="bg-[#0B0D13] text-white py-16 px-4 space-y-16">
+
+  <!-- Our Trusted Brands -->
+  <div class="w-full mx-auto text-center space-y-8">
+    <!-- Tag -->
+    <div>
+      <span class="inline-block border border-red-500 text-white px-5 py-1 rounded-full text-sm font-medium">
+        Our Clients
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-bold">
+      Our <span class="text-red-500">Trusted Brands</span>
+    </h2>
+
+    <!-- Brands Grid or Carousel -->
+    <div class="flex flex-wrap justify-center items-center gap-2 w-full">
+      <!-- Sample Logos -->
+      <img src="digatal.imge\image 47.png" alt="Brand 2" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 48.png" alt="Brand 3" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 49.png" alt="Brand 4" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 50.png" alt="Brand 5" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 51.png" alt="Brand 6" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 52.png" alt="Brand 1" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 53.png" alt="Brand 2" class="bg-white rounded-xl p-2 w-36 h-24 object-contain" />
+      <img src="digatal.imge\image 46.png" alt="Brand 1" class="bg-white rounded-xl p-2 w-40 h-24 object-contain" />
+      <img src="digatal.imge\image 46.png" alt="Brand 3" class="bg-white rounded-xl p-4 w-36 h-24 object-contain" />
+
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="flex justify-center space-x-2 pt-4">
+      <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
+      <span class="w-3 h-3 bg-gray-600 rounded-full"></span>
+      <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
+      <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
+    </div>
+  </div>
+
+  <!-- Let's Connect CTA -->
+  <div class="w-2/3 mx-auto bg-[#12131D] border border-red-500 rounded-[50px] py-12 px-6 text-center space-y-6">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-relaxed">
+      Let’s Connect And Make Unique And <br />
+      Memorable Identity Of Your <span class="text-red-500">Brand!</span>
+    </h2>
+    <a href="#contact"
+      class="inline-block bg-red-600 hover:bg-red-700 transition text-white font-medium py-3 px-6 rounded-full text-sm sm:text-base">
+      Start A Project With Us!
+    </a>
+  </div>
+
+</section>
+
+<section class="bg-[#0B0D13] py-20 px-4 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto relative z-10 ">
+
+  <div class="bg-[#FDE6DC] relative rounded-[300px] px-8 sm:px-20 py-16 flex flex-col lg:flex-row justify-between items-center overflow-visible">
+   
+    <!-- FORM SECTION -->
+    <div class="w-full lg:w-[60%] space-y-8 z-10 pl-20">
+      <button class="border border-red-500 text-red-500 font-semibold px-6 py-2 rounded-full hover:bg-red-500 hover:text-white transition">
+        Get In Touch
+      </button>
+
+      <h2 class="text-3xl sm:text-4xl font-bold">
+        We’d Love To <span class="text-red-600">Hear</span> From You
+      </h2>
+
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 text-sm">Your Name</label>
+            <input type="text" class="w-full border bg-[#FDE6DC] border-black  rounded-full px-4 py-2 outline-none" />
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Services</label>
+            <select class="w-full border border bg-[#FDE6DC] border-black rounded-full px-4 py-2 outline-none text-gray-400">
+              <option>Select Services</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 text-sm">Email</label>
+            <input type="email" class="w-full border border bg-[#FDE6DC] border-black rounded-full px-4 py-2 outline-none" />
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Phone number</label>
+            <input type="text" class="w-full border border bg-[#FDE6DC] border-black rounded-full px-4 py-2 outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block mb-1 text-sm">Leave details about your enquiry</label>
+          <textarea rows="4" class="w-full border border-black rounded-2xl px-4 py-2 outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-full text-center">
+          SUBMIT
+        </button>
+      </form>
+    </div>
+
+    <!-- IMAGE SECTION -->
+    <div class="absolute -top-16 right-8 lg:right-12 w-[240px] sm:w-[320px] lg:w-[455px] z-0">
+      <img src="images\Mask group3.png" alt="Girl with form" class="object-contain" />
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- <section class="bg-[#0B0D13] py-16 px-4">
+  <div class="bg-[#FEEDE1] rounded-[300px] flex flex-col lg:flex-row items-center justify-between px-8 sm:px-16 py-16 max-w-6xl mx-auto h-[700px]">
+
+    <!-- Left Side: Form Content --
+    <div class="w-full lg:w-1/2 space-y-8">
+      <!-- Tag --
+      <div>
+        <span class="inline-block border border-red-500 text-black px-5 py-1 rounded-full text-sm font-medium">
+          Get In Touch
+        </span>
+      </div>
+
+      <!-- Heading --
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
+        We’d Love To <span class="text-red-600">Hear</span> From You
+      </h2>
+
+      <!-- Form --
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm mb-1">Your Name</label>
+            <input type="text" class="w-full border border-black rounded-full px-4 py-2 text-sm outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Services</label>
+            <input type="text" placeholder="Select Services" class="w-full border border-black rounded-full px-4 py-2 text-sm outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Email</label>
+            <input type="email" class="w-full border border-black rounded-full px-4 py-2 text-sm outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Phone number</label>
+            <input type="tel" class="w-full border border-black rounded-full px-4 py-2 text-sm outline-none" />
+          </div>
+        </div>
+
+        <!-- Message Area --
+        <div>
+          <label class="block text-sm mb-1">Leave details about your enquiry</label>
+          <textarea rows="4" class="w-full border border-black rounded-2xl px-4 py-3 text-sm outline-none resize-none"></textarea>
+        </div>
+
+        <!-- Submit Button --
+        <button type="submit" class="w-full bg-[#D33535] hover:bg-red-700 transition text-white font-semibold py-3 rounded-full text-sm sm:text-base">
+          SUBMIT
+        </button>
+      </form>
+    </div>
+
+    <!-- Right Side: Image --
+    <div class="hidden lg:block lg:w-1/2">
+      <img src="digatal.imge\Mask group3.png" alt="Woman" class="max-h-[800px] object-contain mx-auto " />
+    </div>
+  </div>
+</section> -->
+
+
+
+<section class="bg-[#0B0D13] text-white py-24 px-4">
+  <div class="w-2/3 max-w-7xl mx-auto text-center">
+    
+    <!-- Flex Row for "LET’S WORK" and Image -->
+    <div class="flex justify-center items-center gap-6 relative">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug text-[80px]">
+        LET’S WORK
+      </h2>
+
+      <!-- Badge Image -->
+      <img 
+        src="images/group 32.png" 
+        alt="Let's Work Together Badge" 
+        class="w-20 sm:w-32 md:w-[6rem] h-21 object-contain" 
+      />
+    </div>
+
+    <!-- TOGETHER Text -->
+    <div class="mt-4 pl-[10.5rem]">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug">
+        TOGETHER
+      </h2>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="bg-[#0B0D13] text-white py-16 px-4">
+  <!-- Centered Grid Wrapper -->
+  <div class="flex justify-center">
+    <div class="w-full sm:w-2/3 max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Brand Info -->
+      <div class="flex flex-col justify-start space-y-4">
+        <div class="flex w-[200px]">
+        <img src="images/logo.png" alt="Digital Brand World Logo" class="h-20 object-contain " />
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          SEO, Social media marketing, email marketing, Web designing, content writing and all.
+        </p>
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
+          <a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+            <img src="images/vector.png" class="w-4 h-4" />
+          </a>
+          <a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+            <img src="images/vector1.png" class="w-4 h-4" />
+          </a>
+          <a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+            <img src="images/vector2.png" class="w-4 h-4" />
+          </a>
+          <a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+            <img src="images/vector3.png" class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="space-y-2">
+        <h4 class="text-red-500 font-semibold text-lg">SERVICES</h4>
+        <ul class="text-sm space-y-1 text-gray-300">
+          <li>Search Engine Optimisation</li>
+          <li>Pay Per Click</li>
+          <li>Social Media Marketing</li>
+          <li>Email Marketing</li>
+          <li>Content Marketing</li>
+          <li>Website Design and Development</li>
+        </ul>
+      </div>
+
+      <!-- About -->
+      <div class="space-y-2">
+        <h4 class="text-red-500 font-semibold text-lg">ABOUT</h4>
+        <ul class="text-sm space-y-1 text-gray-300">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Agency</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="space-y-4">
+        <h4 class="text-red-500 font-semibold text-lg">CONTACT</h4>
+        <div class="text-sm space-y-2 text-gray-300">
+          <p><i class="fas fa-envelope mr-2"></i> info@digitalbrandworld.com</p>
+          <p><i class="fas fa-phone mr-2"></i> <strong>+91 95104 41461</strong></p>
+          <p><i class="fas fa-map-marker-alt mr-2"></i> 36, Shivam Tenaments, ONGC Colony, Chandkheda, Ahmedabad</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider Line Centered -->
+  <div class="flex justify-center items-center w-full mt-10">
+    <hr class="w-2/3 border-t-2 border-red-500" />
+  </div>
+</section>
+
+
+
+
+
+<!-- <footer class="bg-[#0B0D13] text-white py-16 px-6">
+
+  <div class="flex justify-center items-center">
+  <div class="w-2/3 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  ">
+
+    <!-- Brand Info --
+
+     
+    <div class="flex flex-col items-center justify-center  ">
+      <div class=" space-y-2">
+      
+      <img src="digatal.imge/logo.png" alt="Digital Brand World Logo" class="h-25 " />
+      <p class="text-sm text-gray-400 leading-relaxed">
+        SEO, Social media marketing, email marketing, Web designing, content writing and all the other tools that makes your website boost will be provided by us.
+      </p>
+    
+    </div>
+
+      <!-- Social Icons --
+      <div class="flex space-x-4 pt-4">
+       <!-- Facebook Icon --
+<a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+  <img src="digatal.imge/vector.png" alt="Facebook" class="w-4 h-4 " />
+</a>
+
+<!-- Instagram Icon --
+<a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+  <img src="digatal.imge/vector1.png" alt="Instagram" class="w-4 h-4" />
+</a>
+
+       <!-- Facebook Icon --
+<a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+  <img src="digatal.imge/vector2.png" alt="Facebook" class="w-4 h-4" />
+</a>
+
+<!-- Instagram Icon --
+<a href="#" class="w-9 h-9 border border-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+  <img src="digatal.imge/vector3.png" alt="Instagram" class="w-4 h-4" />
+</a>
+
+      </div>
+    </div>
+
+    <!-- Services --
+    <div class="space-y-2">
+      <h4 class="text-red-500 font-semibold text-lg">SERVICES</h4>
+      <ul class="text-sm space-y-1 text-gray-300">
+        <li>Search Engine Optimisation</li>
+        <li>Pay Per Click</li>
+        <li>Social Media Marketing</li>
+        <li>Email Marketing</li>
+        <li>Content Marketing</li>
+        <li>Website Design and Development</li>
+      </ul>
+    </div>
+
+    <!-- About --
+    <div class="space-y-2">
+      <h4 class="text-red-500 font-semibold text-lg">ABOUT</h4>
+      <ul class="text-sm space-y-1 text-gray-300">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Agency</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact --
+    <div class="space-y-4">
+      <h4 class="text-red-500 font-semibold text-lg">CONTACT</h4>
+      <div class="text-sm space-y-2 text-gray-300">
+        <p><i class="fas fa-envelope mr-2"></i> info@digitalbrandworld.com</p>
+        <p><i class="fas fa-phone mr-2"></i> <strong>+91 95104 41461</strong></p>
+        <p><i class="fas fa-map-marker-alt mr-2"></i> 36, Shivam Tenaments, behind I.P. Hindi Highschool, near Sailganga Duplex, ONGC Colony, Chandkheda, Ahmedabad</p>
+      </div>
+    </div>
+
+  </div >
+</div>
+ <div class="flex justify-center items-center w-full">
+  <hr class="w-2/3 border-t-2 border-red-500 my-4" />
+</div>
+  
+</footer>
+ -->
+
+
+
+
+  
+<!-- scroler bar disply none -->
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+
+
+
+
+<script>
+  // Mobile Menu Toggle
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
+
+  <!-- Swiper JS -->
+
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1.5,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      1024: {
+        slidesPerView: 3.2,
+      },
+    },
+  });
+
+</script>
+
+</body>
+</html>
